@@ -1,0 +1,68 @@
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+}
+
+.navegador_links {
+    list-style-type: none;
+    padding: 20px;
+}
+
+body {
+    background-color: white;
+}
+
+.foto_perfil {
+    background-image: url('../images/background.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:  20px;
+    padding-bottom: 20px;
+}
+
+.foto_perfil_size {
+    height: 300px;
+    width: 300px;
+}
+
+.titulos_centrados {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.textos_centrados {
+    justify-content: center;
+    text-align: center;
+}
+
+.redes_titulo {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.redes_sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.redes_sociales_links {
+    padding: 5px;
+}
+
+.redes_img_size {
+    height: 25px;
+    width: 25px;
+}
