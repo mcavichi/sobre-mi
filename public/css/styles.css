@@ -1,9 +1,11 @@
+/* Header */
 header {
     background-color: black;
     color: white;
     text-align: center;
 }
 
+/* Navegador */
 .navegador {
     display: flex;
     justify-content: center;
@@ -14,10 +16,12 @@ header {
     padding: 20px;
 }
 
+/* Body */
 body {
     background-color: white;
 }
 
+/* Secciones */
 .foto_perfil {
     background-image: url('../images/background.jpg');
     display: flex;
@@ -42,13 +46,12 @@ body {
     justify-content: center;
     text-align: center;
 }
-
+/* Footer */
+/* Redes sociales */
 .redes_titulo {
     background-color: black;
     color: white;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .redes_sociales {
