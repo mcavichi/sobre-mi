@@ -23,7 +23,9 @@ body {
 
 /* Secciones */
 .foto_perfil {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/programming.jpg');
+    background-size: contain;
+    background-repeat: round;
     display: flex;
     justify-content: center;
     align-items: center;
