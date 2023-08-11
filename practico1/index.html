@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <form class="container">
+        <div class="centrado">
+            <input type="number" id="numero1" placeholder="Número 1">
+        </div>
+        <div class="centrado">
+            <select id="operacion">
+                <option value="opcion" disabled selected>Elija una operación</option>
+                <option value="suma">Suma (+)</option>
+                <option value="resta">Resta (-)</option>
+                <option value="multiplicacion">Multiplicación (*)</option>
+                <option value="division">División (/)</option>
+            </select>
+        </div>
+        <div class="centrado">
+            <input type="number" id="numero2" placeholder="Número 2">
+        </div>
+        <div class="centrado">
+            <input class="boton" type="button" id="calcular" value="Calcular">
+        </div>
+        <h4 id="resultado"></h4>
+    </form>
+    <script src="App.js"></script>
+</body>
+</html>

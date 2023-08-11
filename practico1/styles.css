@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(3, 3, 75);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+.boton {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.container {
+    display: block;
+    background-color: rgb(86, 200, 238);
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius:.2em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
