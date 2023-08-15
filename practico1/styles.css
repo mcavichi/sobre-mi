@@ -1,28 +1,46 @@
 body {
-    background-color: rgb(3, 3, 75);
-    color: white;
+    background-image: url(img/calc2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    border-color: white;
     text-align: center;
 }
 
-h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+.titulo {
+    background-color: crimson;
+    color: whitesmoke;
+    opacity: 90%;
+    border-radius: 20px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-
-.boton {
+.boton1 {
     background-color: whitesmoke;
     color: black;
+    border-radius: 20px;
+}
+
+.boton:hover {
+    background-color: crimson;
+    color: whitesmoke;
+    transition: all 0.25s;
 }
 
 .container {
     display: block;
-    background-color: rgb(86, 200, 238);
-    width: 50%;
-    height: auto;
-    margin: auto;
-    border-radius:.2em;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    opacity: 90%;
+    background-color: white;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
 }

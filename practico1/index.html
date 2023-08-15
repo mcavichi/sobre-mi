@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     <title>Calculadora</title>
 </head>
 <body>
-    <h1>CALCULADORA SIMPLE</h1>
-    <form class="container">
+    <!-- Título principal -->
+    <div>
+        <h1 class="titulo">CALCULADORA SIMPLE</h1>
+    </div>
+    <!-- Formulario -->
+    <form class="container" id="formulario">
         <div class="centrado">
-            <input type="number" id="numero1" placeholder="Número 1" required>
+            <input type="number" min="-9999999999" max="9999999999" id="numero1" placeholder="Número 1" >
         </div>
         <div class="centrado">
             <select id="operacion">
@@ -22,13 +27,19 @@
             </select>
         </div>
         <div class="centrado">
-            <input type="number" id="numero2" placeholder="Número 2" required>
+            <input type="number" min="-9999999999" max="9999999999" id="numero2" placeholder="Número 2" required>
         </div>
+        <!-- Boton para calcular -->
         <div class="centrado">
             <input class="boton" type="button" id="calcular" value="Calcular">
         </div>
+        <!-- Resultado -->
         <h4 id="resultado"></h4>
-    </form>
+    </form><!-- Boton para resear formuladio -->
+    <div class="centrado">
+        <button type="reset" class="boton" id="reset">Reset</button>
+    </div>
+    <!-- JS -->
     <script src="App.js"></script>
 </body>
 </html>
