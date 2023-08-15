@@ -19,16 +19,17 @@ function calcular() {
     let valor1 = numero1.value;
     let valor2 = numero2.value;
     let operador = operacion.value;
-    let extremo = 9999999999;
+    let extremoPositivo = 9999999999;
+    let extremoNegativo = -9999999999;
     validarInput();
     switch (operador) {
         case "suma": 
             let suma = Number(valor1) + Number(valor2);
             if((numero1.value.length === 0) || (numero2.value.length === 0)) {
                 alert ('No se puede realizar la suma.'); 
-            } else if (suma > extremo && suma.toString().length > 10) {
+            } else if (suma > extremoPositivo && suma.toString().length > 10) {
                 alert('Error! El numero es muy grande!')
-            } else if(suma < -extremo && suma.toString().length < 10) {
+            } else if(suma < -extremoNegativo && suma.toString().length > 10) {
                 alert('Error! El numero es muy chico!')
             } else {
                 resultado.innerHTML = 'El resultado es ' + suma;
@@ -38,9 +39,9 @@ function calcular() {
             let resta = Number(valor1) - Number(valor2);
             if((numero1.value.length === 0) || (numero2.value.length === 0)) {
                 alert ('No se puede realizar la resta.');
-            } else if (resta > extremo && resta.toString().length > 10) {
+            } else if (resta > extremoPositivo && resta.toString().length > 10) {
                 alert('Error! El numero es muy grande!')
-            } else if(resta < -extremo && resta.toString().length < 10) {
+            } else if(resta < extremoNegativo && resta.toString().length > 10) {
                 alert('Error! El numero es muy chico!')
             } else {
             resultado.innerHTML = 'El resultado es ' + resta;
@@ -50,9 +51,9 @@ function calcular() {
             let multiplicacion = valor1 * valor2;
             if((numero1.value.length === 0) || (numero2.value.length === 0)) {
                 alert ('No se puede realizar la multiplicacion.');
-            } else if (multiplicacion > extremo && multiplicacion.toString().length > 10) {
+            } else if (multiplicacion > extremoPositivo && multiplicacion.toString().length > 10) {
                 alert('Error! El numero es muy grande!')
-            } else if(multiplicacion < -extremo && multiplicacion.toString().length < 10) {
+            } else if(multiplicacion < extremoNegativo && multiplicacion.toString().length > 10) {
                 alert('Error! El numero es muy chico!')
             } else {
             resultado.innerHTML = 'El resultado es ' + multiplicacion;
@@ -64,9 +65,9 @@ function calcular() {
                 alert ('No se puede realizar la division.');
             } else if (valor2 === '0') {
                 alert('No se puede dividir por cero. Seleccione otro número.');
-            } else if (division > extremo && division.toString().length > 10) {
+            } else if (division > extremoPositivo && division.toString().length > 10) {
                 alert('Error! El numero es muy grande!')
-            } else if(division < -extremo && division.toString().length < 10) {
+            } else if(division < extremoNegativo && division.toString().length > 10) {
                 alert('Error! El numero es muy chico!')    
             } else {
                 resultado.innerHTML = 'El resultado es ' + division;    
