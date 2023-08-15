@@ -1,4 +1,4 @@
-// Acceso a los Id del Document.
+// Accediendo a los Id del Document.
 let numero1 = document.getElementById("numero1");
 let numero2 = document.getElementById("numero2");
 let operacion = document.getElementById("operacion");
