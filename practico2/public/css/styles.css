@@ -1,0 +1,83 @@
+/* body {
+    background-color: black;
+} */
+
+main {
+    background-color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+h1 {
+    background-color: black;
+    margin: 0 auto 0 auto;
+    border-color: blueviolet;
+    border-style: double;
+    border: 5%;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.listado {
+    list-style-type: none;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.juego {
+    height: 200px;
+    width: 200px;
+}
+
+.juego:hover{
+    border-radius:50%;
+    transform: rotate(360deg);
+    transition: all 2s;
+    }
+
+.images {
+    height: 125px;
+    width: 125px;
+}
+
+.images:hover {
+    scale: 1.2;
+    transition: all 0.25s;
+    filter: saturate(2);
+    cursor: pointer;
+}
+
+
+.img_sizing {
+    height: 40px;
+    width: 40px;
+}
+
+.vs_img {
+    height: 40px;
+    width: 40px;
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* Definición de la animación */
+@keyframes animacion {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

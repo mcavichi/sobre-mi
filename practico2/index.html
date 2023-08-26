@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Sweet Alert -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+    <title>PIEDRA, PAPEL O TIJERA</title>
+</head>
+<body>
+    <main>
+        <!-- TITULO PRINCIPAL -->
+        <h1 class="text-center">PIEDRA, PAPEL O TIJERA?</h1>
+        <!-- IMAGEN PRINCIPAL -->
+        <article class="centrado">
+            <img id="imagenPrincipalDelJuego" class="img-fluid juego" src="public/images/juego.png" alt="imagenPrincipalDelJuego">
+        </article>
+        <!-- REGLAS DEL JUEGO -->
+        <article id="reglas">
+        <h4 class=" text-center">Las reglas del juego son las siguientes:</h4>
+        <ul class="text-center">
+            <li class="listado">El juego se juega entre dos jugadores, en este caso el usuario y la computadora.</li>
+            <li class="listado">Cada jugador elige una de las tres opciones: piedra, papel o tijera.</li>
+            <li class="listado">PIEDRA le gana a TIJERA /  TIJERA le gana a PAPEL / PAPEL le gana a PIEDRA.</li>
+            <li class="listado">Si ambos jugadores eligen la misma opción, la ronda termina en empate y  se vuelve a jugar.</li>
+            <li class="listado">El juego finaliza cuando alguno de los jugadores alcanza 3 victorias.</li>
+        </ul>
+        </article>
+        <!-- BOTON INICIAR -->
+        <div class="d-flex justify-content-center align-items-center pt-3">
+            <button id="botonIniciar" type="button" class="btn btn-primary btn-sm centrado">Iniciar</button>
+        </div>
+        <!-- TEXTO QUE DICE ELIGE TU JUGADA -->
+        <div class="centrado">
+            <h4 id="eligeTuJugada" style="display:none;">ELIGE TU JUGADA:</h4>
+        </div>
+        <!-- IMAGENES PIEDRA PAPEL TIJERA QUE SELECCIONA EL USUARIO -->
+        <article class="centrado mt-3">
+            <img id="piedra" class="img-fluid images p-2" src="public/images/piedra.png" alt="piedra" style="display:none;">
+            <img id="papel"  class="img-fluid images p-2" src="public/images/papel.png" alt="papel" style="display:none;">
+            <img id="tijera" class="img-fluid images p-2" src="public/images/tijera.png" alt="tijera" style="display:none;">
+        </article>
+        <!-- VISUALIZACION DE JUGADAS PARCIALES -->
+        <article id="jugadasParciales" class="mt-2" style="display:none;">
+            <!-- Jugada parcial de usuario -->
+            <div class="centrado">
+                <h4 id="nombre" class="px-1"></h4>
+                <div>
+                    <h4 id="usuario"></h4>
+                </div> 
+            </div>
+            <!-- Jugada parcial de computadora -->
+            <div class="centrado">
+                <h4 class="px-1">La computadora juega:</h4>
+                <div>
+                    <h4 id="computadora"></h4>
+                </div>
+            </div>
+        </article>
+        <!-- VISUALIZACION DE RESULTADOS PARCIALES -->
+        <article class="centrado">
+            <div>
+                <h4 id="resultado"></h4>
+            </div>
+        </article>
+        <!-- CONTADORES -->
+        <article class="container-fluid bg-dark text-white text-center">
+            <p id="contadorUsuario" style="display:none;">Usuario: 0</p>
+            <div class="centrado">
+                <img id="vs" class="img-fluid vs_img" style="display:none;" src="public/images/vs_icon.png" alt="versus">
+            </div>
+            <p id="contadorComputadora" class="pt-2" style="display:none;">Computadora: 0</p>
+        </article>
+        <!-- RESULTADO FINAL -->
+        <article>
+            <h3 class="text-center text-white bg-danger" id="resultadoFinal"></h3>
+        </article>
+        <!-- BOTON INICIAR -->
+        <div class="d-flex justify-content-center align-items-center pt-3">
+            <button id="botonReiniciar" type="button" class="btn btn-primary btn-sm centrado" style="display:none;">Reiniciar</button>
+        </div>
+    </main>
+<!--     <footer id="footer">
+        <div class="text-center text-white">
+            <a href="https://github.com/mcavichi" target="_blank"><img class="img_sizing" src="public/images/github.png" alt="github"></a>
+        </div>
+        <section>
+            <p class="text-center text-white">Copyright 2023 © Todos los derechos reservados.</p>
+        </section>
+    </footer> -->
+    <script src="App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
