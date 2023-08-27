@@ -142,7 +142,7 @@ function determinarGanador(jugadaUsuario, jugadaComputadora) {
         ((jugadaUsuario === 'papel') && (jugadaComputadora === 'piedra')) ||
         ((jugadaUsuario === 'tijera') && (jugadaComputadora === 'papel'))) {
             puntajeUsuario+=1;
-            contadorUsuario.innerText = `Usuario: ${puntajeUsuario}`
+            contadorUsuario.innerText = `${nombre}: ${puntajeUsuario}`
             return resultado = `${nombre} gana!`;
         } else if (((jugadaUsuario === 'piedra') && (jugadaComputadora === 'piedra')) || 
                 ((jugadaUsuario === 'papel') && (jugadaComputadora === 'papel')) || 
