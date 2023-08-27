@@ -1,7 +1,7 @@
 let imagenPrincipalDelJuego = document.getElementById('imagenPrincipalDelJuego');
 let reglas = document.getElementById('reglas');
 let botonIniciar = document.getElementById('botonIniciar');
-let elijeTuJugada = document.getElementById('eligeTuJugada');
+let eligeTuJugada = document.getElementById('eligeTuJugada');
 let piedra = document.getElementById('piedra');
 let papel = document.getElementById('papel');
 let tijera = document.getElementById('tijera');
@@ -43,7 +43,7 @@ function mostrarOcultarElementos() {
     imagenPrincipalDelJuego.style.display = 'none';
     reglas.style.display = 'none';
     botonIniciar.style.display = 'none';
-    elijeTuJugada.style.display = "block";
+    eligeTuJugada.style.display = "block";
     piedra.style.display = "block";
     papel.style.display = "block";
     tijera.style.display = "block"; 
@@ -161,7 +161,7 @@ let puntajeComputadora = 0;
 
 function resultadoFinal () {
     if(puntajeUsuario === 3 && puntajeComputadora < 3) {
-        // document.getElementById('resultadoFinal').innerHTML ='¡GANASTE!';
+        document.getElementById('resultadoFinal').innerHTML ='¡GANASTE!';
         Swal.fire({
             title: '¡GANASTE! BIEN JUGADO! ',
             width: 400,
@@ -174,8 +174,9 @@ function resultadoFinal () {
             center top
             no-repeat `
         })
+        noPermitirAvanzar()
     } else if (puntajeComputadora === 3 && puntajeUsuario < 3) {
-        // document.getElementById('resultadoFinal').innerHTML = '¡PERDISTE!';
+        document.getElementById('resultadoFinal').innerHTML = '¡PERDISTE!';
         Swal.fire({
             title: '¡PERDISTE! INTENTALO DE NUEVO!',
             width: 400,
@@ -188,6 +189,7 @@ function resultadoFinal () {
             center top
             no-repeat `
         })
+        noPermitirAvanzar()
     }
 };
 
@@ -216,5 +218,22 @@ function reiniciar() {
     window.location.reload();
 }
 
+function noPermitirAvanzar() {
+    if(puntajeUsuario === 3 || puntajeComputadora === 3) {
+        document.getElementById('eligeTuJugada').style.display = "none";
+        document.getElementById('piedra').style.display = "none";
+        document.getElementById('papel').style.display = "none";
+        document.getElementById('tijera').style.display = "none";
+        document.getElementById('jugadasParciales').style.display = "none";
+        document.getElementById('jugadasParciales').style.display = "none";
+        document.getElementById('resultado').style.display = "none";
+        // imagenPrincipalDelJuego.style.display = 'block';
+        if(puntajeUsuario === 3) {
+            document.getElementById('win').style.display = 'block';
+        } else {
+            document.getElementById('lose').style.display = 'block';
+        }
+    }
+}
 
 

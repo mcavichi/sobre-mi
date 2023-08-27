@@ -20,6 +20,8 @@
         <!-- IMAGEN PRINCIPAL -->
         <article class="centrado">
             <img id="imagenPrincipalDelJuego" class="img-fluid juego" src="public/images/juego.png" alt="imagenPrincipalDelJuego">
+            <img id="win" class="img-fluid pt-4" src="public/images/win.gif" alt="win" style="display:none;">
+            <img id="lose" class="img-fluid pt-4" src="public/images/lose.gif" alt="lose" style="display:none;">
         </article>
         <!-- REGLAS DEL JUEGO -->
         <article id="reglas">
@@ -34,7 +36,7 @@
         </article>
         <!-- BOTON INICIAR -->
         <div class="d-flex justify-content-center align-items-center pt-3">
-            <button id="botonIniciar" type="button" class="btn btn-primary btn-sm centrado">Iniciar</button>
+            <button id="botonIniciar" type="button" class="btn btn-primary btn-lg centrado">Iniciar</button>
         </div>
         <!-- TEXTO QUE DICE ELIGE TU JUGADA -->
         <div class="centrado">
@@ -66,24 +68,24 @@
         <!-- VISUALIZACION DE RESULTADOS PARCIALES -->
         <article class="centrado">
             <div>
-                <h4 id="resultado"></h4>
+                <h4 id="resultado" style="background-color: red;"></h4>
             </div>
         </article>
         <!-- CONTADORES -->
-        <article class="container-fluid bg-dark text-white text-center">
-            <p id="contadorUsuario" style="display:none;">Usuario: 0</p>
+        <article class="d-block bg-dark text-white text-center">
+            <p id="contadorUsuario" class="centrado text-center pt-2" style="display:none;">Usuario: 0</p>
             <div class="centrado">
                 <img id="vs" class="img-fluid vs_img" style="display:none;" src="public/images/vs_icon.png" alt="versus">
             </div>
-            <p id="contadorComputadora" class="pt-2" style="display:none;">Computadora: 0</p>
+            <p id="contadorComputadora" class="centrado text-center pt-2 pb-2" style="display:none;">Computadora: 0</p>
         </article>
         <!-- RESULTADO FINAL -->
         <article>
             <h3 class="text-center text-white bg-danger" id="resultadoFinal"></h3>
         </article>
-        <!-- BOTON INICIAR -->
+        <!-- BOTON REINICIAR -->
         <div class="d-flex justify-content-center align-items-center pt-3">
-            <button id="botonReiniciar" type="button" class="btn btn-primary btn-sm centrado" style="display:none;">Reiniciar</button>
+            <button id="botonReiniciar" type="button" class="btn btn-primary btn-lg centrado" style="display:none;">Reiniciar</button>
         </div>
     </main>
 <!--     <footer id="footer">
