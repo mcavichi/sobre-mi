@@ -19,9 +19,9 @@
         <h1 class="text-center">PIEDRA, PAPEL O TIJERA?</h1>
         <!-- IMAGEN PRINCIPAL -->
         <article class="centrado">
-            <img id="imagenPrincipalDelJuego" class="img-fluid juego" src="public/images/juego.png" alt="imagenPrincipalDelJuego">
-            <img id="win" class="img-fluid pt-4" src="public/images/win.gif" alt="win" style="display:none;">
-            <img id="lose" class="img-fluid pt-4" src="public/images/lose.gif" alt="lose" style="display:none;">
+            <img id="imagenPrincipalDelJuego" class="img-fluid juego animate__animated animate__backInLeft rotate-scale-up" src="public/images/juego.png" alt="imagenPrincipalDelJuego">
+            <img id="win" class="img-fluid pt-4 animate__animated animate__zoomInUp" src="public/images/win.gif" alt="win" style="display:none;">
+            <img id="lose" class="img-fluid pt-4 animate__animated animate__zoomInUp" src="public/images/lose.gif" alt="lose" style="display:none;">
         </article>
         <!-- REGLAS DEL JUEGO -->
         <article id="reglas">
@@ -44,9 +44,9 @@
         </div>
         <!-- IMAGENES PIEDRA PAPEL TIJERA QUE SELECCIONA EL USUARIO -->
         <article class="centrado mt-3">
-            <img id="piedra" class="img-fluid images p-2" src="public/images/piedra.png" alt="piedra" style="display:none;">
-            <img id="papel"  class="img-fluid images p-2" src="public/images/papel.png" alt="papel" style="display:none;">
-            <img id="tijera" class="img-fluid images p-2" src="public/images/tijera.png" alt="tijera" style="display:none;">
+            <img id="piedra" class="img-fluid images p-2 animate__animated animate__fadeInLeftBig" src="public/images/piedra.png" alt="piedra" style="display:none;">
+            <img id="papel"  class="img-fluid images p-2 animate__animated animate__fadeInDownBig" src="public/images/papel.png" alt="papel" style="display:none;">
+            <img id="tijera" class="img-fluid images p-2 animate__animated animate__fadeInRightBig" src="public/images/tijera.png" alt="tijera" style="display:none;">
         </article>
         <!-- VISUALIZACION DE JUGADAS PARCIALES -->
         <article id="jugadasParciales" class="mt-2" style="display:none;">
@@ -88,14 +88,6 @@
             <button id="botonReiniciar" type="button" class="btn btn-primary btn-lg centrado" style="display:none;">Reiniciar</button>
         </div>
     </main>
-<!--     <footer id="footer">
-        <div class="text-center text-white">
-            <a href="https://github.com/mcavichi" target="_blank"><img class="img_sizing" src="public/images/github.png" alt="github"></a>
-        </div>
-        <section>
-            <p class="text-center text-white">Copyright 2023 © Todos los derechos reservados.</p>
-        </section>
-    </footer> -->
     <script src="App.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
