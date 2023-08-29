@@ -1,3 +1,4 @@
+// Accediendo al DOM
 let imagenPrincipalDelJuego = document.getElementById('imagenPrincipalDelJuego');
 let reglas = document.getElementById('reglas');
 let botonIniciar = document.getElementById('botonIniciar');
@@ -13,8 +14,8 @@ let usuario = document.getElementById('usuario');
 let versus = document.getElementById('vs');
 let footer = document.getElementById('footer');
 let botonReiniciar = document.getElementById('botonReiniciar').addEventListener('click', reiniciar)
-// let resultadoFinal = document.getElementById('resultadoFinal');
 
+//Inicia el juego cuando se clickea el boton iniciar y pide al usuario ingrese su nombre.
 function iniciar() {
     Swal.fire({
         title: 'Ingrese su nombre:',
@@ -39,6 +40,7 @@ function iniciar() {
     })
 }
 
+//Se utiliza para ocultar los componentes de la pagina principal y mostrar los componentes de vizualizacion del juego.
 function mostrarOcultarElementos() {
     imagenPrincipalDelJuego.style.display = 'none';
     reglas.style.display = 'none';
@@ -50,64 +52,64 @@ function mostrarOcultarElementos() {
     contadorUsuario.style = "block";
     contadorComputadora.style.display = "block";
     versus.style.display = "block";
-    // footer.style.display = "none";
     document.getElementById('botonReiniciar').style.display = "block";
 }
 
+//Evento del boton inicio
 botonIniciar.addEventListener('click', iniciar);
+//Evento mostrar y ocultar componentes
 botonIniciar.addEventListener('click', mostrarOcultarElementos);
-
+//Eventos que llama a las funciones piedra, papel o tijera
 piedra.addEventListener('click', juegaPiedra);
 papel.addEventListener('click', juegaPapel);
 tijera.addEventListener('click', juegaTijera);
 
+//Funcion que toma la jugada del usuario al clickear la imagen de la piedra, toma la jugada de la computadora y determina ganador.
 function juegaPiedra() {
     piedra.style.transform = "rotate(360deg)";
     piedra.style.transition = "transform 1s";
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'piedra';
-    console.log(jugadaUsuario);
+    // console.log(jugadaUsuario);
     let jugadaComputadora = obtenerJugadaComputadora();
-    console.log(jugadaComputadora);
+    // console.log(jugadaComputadora);
     let determinaGanador = determinarGanador(jugadaUsuario, jugadaComputadora);
-    console.log(determinaGanador);
+    // console.log(determinaGanador);
     resultadoFinal();
-    // reiniciar()
     return resultado.innerHTML = determinaGanador;
 };
 
 
+//Funcion que toma la jugada del usuario al clickear la imagen de la papel, toma la jugada de la computadora y determina ganador.
 function juegaPapel() {
     papel.style.transform = "rotate(360deg)";
     papel.style.transition = "transform 1s";
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'papel';
-    console.log(jugadaUsuario);
+    // console.log(jugadaUsuario);
     let jugadaComputadora = obtenerJugadaComputadora();
-    console.log(jugadaComputadora);
+    // console.log(jugadaComputadora);
     let determinaGanador = determinarGanador(jugadaUsuario, jugadaComputadora);
-    console.log(determinaGanador);
+    // console.log(determinaGanador);
     resultadoFinal();
-    // reiniciar()
     return resultado.innerHTML = determinaGanador;
 };
 
-
+//Funcion que toma la jugada del usuario al clickear la imagen de la tijera, toma la jugada de la computadora y determina ganador.
 function juegaTijera() {
     tijera.style.transform = "rotate(360deg)";
     tijera.style.transition = "transform 1s";
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'tijera';
-    console.log(jugadaUsuario);
+    // console.log(jugadaUsuario);
     let jugadaComputadora = obtenerJugadaComputadora();
-    console.log(jugadaComputadora);
+    // console.log(jugadaComputadora);
     let determinaGanador = determinarGanador(jugadaUsuario, jugadaComputadora);
-    console.log(determinaGanador);
+    // console.log(determinaGanador);
     resultadoFinal();
-    // reiniciar()
     return resultado.innerHTML = determinaGanador;
 };
 
@@ -155,10 +157,12 @@ function determinarGanador(jugadaUsuario, jugadaComputadora) {
         }
 };
 
-
+//Contador. Se inicializa los contadores que suma los puntos de la compu y del usuario de acuerdo a las jugadas de cada uno.
 let puntajeUsuario = 0;
 let puntajeComputadora = 0;
 
+
+//Mensaje de ganador/perdedor
 function resultadoFinal () {
     if(puntajeUsuario === 3 && puntajeComputadora < 3) {
         document.getElementById('resultadoFinal').innerHTML ='¡GANASTE!';
@@ -167,12 +171,7 @@ function resultadoFinal () {
             width: 400,
             padding: '3em',
             color: '#716add',
-            background: '#fff url(/public/images/bg.jpg)',
-            backdrop: `
-            rgba(0,0,123,0.4)
-            url("/public/images/win.gif")
-            center top
-            no-repeat `
+            background: '#fff url(/public/images/bg.jpg)'
         })
         noPermitirAvanzar()
     } else if (puntajeComputadora === 3 && puntajeUsuario < 3) {
@@ -182,12 +181,7 @@ function resultadoFinal () {
             width: 400,
             padding: '3em',
             color: '#716add',
-            background: '#fff url(/public/images/bg.jpg)',
-            backdrop: `
-            rgba(0,0,123,0.4)
-            url("/public/images/lose.gif")
-            center top
-            no-repeat `
+            background: '#fff url(/public/images/bg.jpg)'
         })
         noPermitirAvanzar()
     }
@@ -206,18 +200,12 @@ function toggleAnimation() {
 // Ejecuta la función de toggleAnimation cada 3 segundos
 setInterval(toggleAnimation, 3000);
 
-// function reiniciar() {
-//     if(puntajeUsuario === 3 || puntajeComputadora === 3) {
-//         setTimeout(function(){
-//             window.location.reload();
-//         }, 7000);
-//     }
-// }
-
+//Funcion reiniciar juego
 function reiniciar() {
     window.location.reload();
 }
 
+//Funcion que no permite seguir jugando si alguno de los jugadores llego ya a las 3 victorias.
 function noPermitirAvanzar() {
     if(puntajeUsuario === 3 || puntajeComputadora === 3) {
         document.getElementById('eligeTuJugada').style.display = "none";
