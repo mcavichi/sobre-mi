@@ -66,8 +66,11 @@ tijera.addEventListener('click', juegaTijera);
 
 //Funcion que toma la jugada del usuario al clickear la imagen de la piedra, toma la jugada de la computadora y determina ganador.
 function juegaPiedra() {
-    piedra.style.transform = "rotate(360deg)";
-    piedra.style.transition = "transform 1s";
+    piedra.style.transform = "rotate(-90deg)";
+    piedra.style.transition = "transform 0.5s";
+    setTimeout(function() {
+        piedra.style.transform = "none";
+    }, 500);
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'piedra';
@@ -83,8 +86,11 @@ function juegaPiedra() {
 
 //Funcion que toma la jugada del usuario al clickear la imagen de la papel, toma la jugada de la computadora y determina ganador.
 function juegaPapel() {
-    papel.style.transform = "rotate(360deg)";
-    papel.style.transition = "transform 1s";
+    papel.style.transform = "rotate(-90deg)";
+    papel.style.transition = "transform 0.5s";
+    setTimeout(function() {
+        papel.style.transform = "none";
+    }, 500);
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'papel';
@@ -99,8 +105,11 @@ function juegaPapel() {
 
 //Funcion que toma la jugada del usuario al clickear la imagen de la tijera, toma la jugada de la computadora y determina ganador.
 function juegaTijera() {
-    tijera.style.transform = "rotate(360deg)";
-    tijera.style.transition = "transform 1s";
+    tijera.style.transform = "rotate(-90deg)";
+    tijera.style.transition = "transform 0.5s";
+    setTimeout(function() {
+        tijera.style.transform = "none";
+    }, 500);
     jugadasParciales.style.display = "block";
     document.getElementById('nombre').innerHTML = `${nombre} eligio:`;
     let jugadaUsuario = usuario.innerHTML = 'tijera';
